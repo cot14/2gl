@@ -139,6 +139,7 @@ describe('MultiSprite', () => {
                 assert.deepEqual(multiSprite._data.colorAlpha.array, new Float32Array([
                     0.5, 0.5, 0.5, 0.5, 0.5, 0.5
                 ]));
+                assert.equal(multiSprite._data.colorAlpha.dirty, true);
             });
         });
 
@@ -154,6 +155,7 @@ describe('MultiSprite', () => {
                     5, 7, 0,
                     5, 7, 0
                 ]));
+                assert.equal(multiSprite._data.position.dirty, true);
             });
         });
 
@@ -169,6 +171,7 @@ describe('MultiSprite', () => {
                     1, 2, 5,
                     1, 2, 5
                 ]));
+                assert.equal(multiSprite._data.position.dirty, true);
             });
         });
 
@@ -184,6 +187,7 @@ describe('MultiSprite', () => {
                     5, 7,
                     5, 7
                 ]));
+                assert.equal(multiSprite._data.scale.dirty, true);
             });
         });
 
@@ -199,6 +203,7 @@ describe('MultiSprite', () => {
                     5, 7,
                     5, 7
                 ]));
+                assert.equal(multiSprite._data.offset.dirty, true);
             });
         });
 
@@ -214,6 +219,7 @@ describe('MultiSprite', () => {
                     1, -3,
                     3, -1
                 ]));
+                assert.equal(multiSprite._data.texture.dirty, true);
             });
         });
     });
